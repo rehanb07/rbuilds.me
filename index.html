@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rehan Bhargava — Engineering Portfolio</title>
+<title>Rehan Bhargava — Maker Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -99,6 +99,80 @@ section{padding:6rem 3rem}
 .stat-box{background:var(--ink2);padding:2rem 1.5rem}
 .stat-num{font-family:var(--serif);font-size:2.8rem;color:var(--accent);line-height:1;margin-bottom:0.4rem}
 .stat-desc{font-size:0.82rem;color:var(--muted);font-weight:400;letter-spacing:0.05em}
+
+
+/* ── FEATURED PROJECT ── */
+#featured{
+  border-top:1px solid var(--card-border);
+  padding:6rem 3rem;
+  display:none; /* hidden until JS finds a featured project */
+}
+#featured.visible{display:block}
+.featured-inner{
+  display:grid;grid-template-columns:55% 45%;gap:0;
+  border:1px solid var(--card-border);overflow:hidden;border-radius:2px;
+  margin-top:2.5rem;min-height:540px;
+}
+.featured-img-wrap{position:relative;overflow:hidden;background:var(--ink3)}
+.featured-img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  filter:grayscale(15%);transition:filter 0.5s,transform 0.5s;
+}
+.featured-inner:hover .featured-img{filter:grayscale(0%);transform:scale(1.04)}
+.featured-img-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(105deg,transparent 50%,rgba(14,14,15,0.85) 100%);
+}
+/* accent corner bracket */
+.featured-img-wrap::after{
+  content:'';position:absolute;bottom:1.5rem;left:1.5rem;
+  width:32px;height:32px;
+  border-bottom:2px solid var(--accent);border-left:2px solid var(--accent);
+}
+.featured-body{
+  background:var(--ink2);padding:3.5rem;
+  display:flex;flex-direction:column;justify-content:space-between;
+  border-left:1px solid var(--card-border);
+}
+.featured-eyebrow{
+  font-family:var(--mono);font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.7rem;
+}
+.featured-eyebrow::before{content:'\2605';font-size:0.55rem}
+.featured-title{
+  font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);
+  line-height:1.1;margin-bottom:1.25rem;color:var(--fg);
+}
+.featured-desc{
+  font-size:1.05rem;font-weight:300;color:var(--fg2);line-height:1.85;
+  margin-bottom:1.75rem;flex:1;
+}
+.featured-tags{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.featured-tags .tag{font-size:0.68rem;padding:0.3rem 0.7rem}
+.featured-meta{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:1.75rem;border-top:1px solid var(--card-border);
+}
+.featured-type{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
+.featured-link{
+  display:inline-flex;align-items:center;gap:0.6rem;padding:0.85rem 1.8rem;
+  background:var(--accent);color:var(--ink);
+  font-family:var(--sans);font-weight:600;font-size:0.85rem;
+  letter-spacing:0.08em;text-transform:uppercase;border-radius:2px;
+  transition:background 0.2s,transform 0.15s;
+}
+.featured-link:hover{background:#f0d890;transform:translateY(-2px)}
+.featured-link-wip{
+  display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.8rem;
+  border:1px solid var(--subtle);color:var(--muted);
+  font-family:var(--mono);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;
+  border-radius:2px;cursor:default;
+}
+.featured-badge{
+  font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--accent);background:rgba(232,201,122,0.1);border:1px solid rgba(232,201,122,0.3);
+  padding:0.2rem 0.6rem;border-radius:1px;
+}
 
 /* ── PROJECTS ── */
 #projects{border-top:1px solid var(--card-border)}
@@ -234,6 +308,9 @@ footer{
   .hero{padding:0 1.5rem 4rem}
   section{padding:4rem 1.5rem}
   #about{grid-template-columns:1fr;gap:3rem}
+  .featured-inner{grid-template-columns:1fr}
+  .featured-img-wrap{height:280px}
+  .featured-body{padding:2rem 1.5rem}
   .project-card{grid-template-columns:auto 1fr;padding:1.25rem 1.5rem}
   .project-right,.project-num{display:none}
   .project-thumb{width:56px;height:42px}
@@ -249,6 +326,7 @@ footer{
   <div class="nav-logo">RB_PORTFOLIO</div>
   <div class="nav-links">
     <a href="#about">About</a>
+    <a href="#featured">Featured</a>
     <a href="#projects">Work</a>
     <a href="#contact">Contact</a>
   </div>
@@ -260,9 +338,9 @@ footer{
   <div class="hero-accent-line"></div>
   <div class="hero-accent-dot"></div>
   <div class="hero-content">
-    <div class="hero-label">Mechanical Engineer, Dream Chaser</div>
-    <h1 class="hero-title">Rehan<br><em>Bhargava</em></h1>
-    <p class="hero-sub"> I make cool things.</p>
+    <div class="hero-label">Maker &amp; Builder</div>
+    <h1 class="hero-title">Rehan<br><em>Bhargava.</em></h1>
+    <p class="hero-sub">Projects spanning hardware, software, and everything in between. Built with curiosity, documented with care.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn-primary">View Work →</a>
       <a href="#contact" class="btn-ghost">Get in Touch</a>
@@ -275,7 +353,8 @@ footer{
   <div class="about-text">
     <div class="section-label">About</div>
     <h2 class="section-title">Builder at Heart</h2>
-    <p>Engineering and Project Portfolio — a living archive of repos, CAD models, and builds that I want to share. Projects are updated as they evolve or ship.</p>
+    <p>Welcome to my maker portfolio — a living archive of repos, CAD models, and builds that I'm proud of. Projects are updated as they evolve or ship.</p>
+    <p>I believe the best way to learn is to make things, break them, and make them again — better.</p>
     <div style="margin-top:2rem">
       <a href="https://github.com/rehanb07" target="_blank" class="btn-primary" style="display:inline-flex">GitHub Profile →</a>
     </div>
@@ -298,6 +377,14 @@ footer{
       <div class="stat-desc">Philosophy</div>
     </div>
   </div>
+</section>
+
+
+<!-- FEATURED SECTION — shown/hidden and populated by JS -->
+<section id="featured">
+  <div class="section-label">Highlight</div>
+  <h2 class="section-title">Featured Project</h2>
+  <div class="featured-inner" id="featured-inner"></div>
 </section>
 
 <section id="projects">
@@ -331,28 +418,65 @@ footer{
 </footer>
 
 <script type="module">
-import { projects } from './project-info.js';
+import { projects } from './project-info.js?v=3';
 
-/* ── Helpers ── */
 const $ = id => document.getElementById(id);
 
-// Update stat count
+// Stat count
 $('proj-count').textContent = String(projects.length).padStart(2, '0');
 
-// Get unique categories in order they appear
+// Unique categories
 const allCategories = [...new Set(projects.map(p => p.category || 'Other'))];
 
-/* ── Build a single project row ── */
-function buildCard(p, index, flatStyle = false) {
+// ── FEATURED SECTION ──
+// Set featured: true on any project in project-info.js to show it here.
+// Only the first featured project is shown. The section hides itself if none exist.
+const featuredProject = projects.find(p => p.featured === true);
+
+if (featuredProject) {
+  document.getElementById('featured').classList.add('visible');
+  const hasLink = featuredProject.link && featuredProject.link.trim() !== '';
+  const tagHTML = (featuredProject.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
+  const linkBtn = hasLink
+    ? `<a class="featured-link" href="${featuredProject.link}" target="_blank">Open Project ↗</a>`
+    : `<span class="featured-link-wip">Work in Progress</span>`;
+
+  document.getElementById('featured-inner').innerHTML = `
+    <div class="featured-img-wrap">
+      <img class="featured-img" src="${featuredProject.img}" alt="${featuredProject.title}">
+      <div class="featured-img-overlay"></div>
+    </div>
+    <div class="featured-body">
+      <div>
+        <div class="featured-eyebrow">Featured Build</div>
+        <h3 class="featured-title">${featuredProject.title}</h3>
+        <p class="featured-desc">${featuredProject.desc}</p>
+        <div class="featured-tags">${tagHTML}</div>
+      </div>
+      <div class="featured-meta">
+        <span class="featured-type">${featuredProject.type || ''}</span>
+        ${linkBtn}
+      </div>
+    </div>
+  `;
+}
+
+// ── BUILD A PROJECT CARD ──
+function buildCard(p, index) {
   const isWIP = !p.link || p.link.trim() === '';
   const card = document.createElement(isWIP ? 'div' : 'a');
   card.className = 'project-card' + (isWIP ? ' no-link' : '');
   if (!isWIP) { card.href = p.link; card.target = '_blank'; }
 
   const tagHTML = (p.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
-  const rightHTML = isWIP
-    ? `<div class="project-right"><span class="wip-badge">WIP</span><span class="project-type">${p.type || ''}</span></div>`
-    : `<div class="project-right"><span class="project-arrow">↗</span><span class="project-type">${p.type || ''}</span></div>`;
+  let rightHTML;
+  if (isWIP) {
+    rightHTML = `<div class="project-right"><span class="wip-badge">WIP</span><span class="project-type">${p.type || ''}</span></div>`;
+  } else if (p.featured) {
+    rightHTML = `<div class="project-right"><span class="featured-badge">★ Featured</span><span class="project-arrow">↗</span></div>`;
+  } else {
+    rightHTML = `<div class="project-right"><span class="project-arrow">↗</span><span class="project-type">${p.type || ''}</span></div>`;
+  }
 
   card.innerHTML = `
     <span class="project-num">0${index + 1}</span>
@@ -367,54 +491,43 @@ function buildCard(p, index, flatStyle = false) {
   return card;
 }
 
-/* ── Render "All" tab — flat list ── */
+// ── RENDER FUNCTIONS ──
 function renderAll() {
   const area = $('projects-area');
   area.innerHTML = '';
   const flat = document.createElement('div');
   flat.className = 'projects-flat';
-  projects.forEach((p, i) => flat.appendChild(buildCard(p, i, true)));
+  projects.forEach((p, i) => flat.appendChild(buildCard(p, i)));
   area.appendChild(flat);
 }
 
-/* ── Render a specific category tab — folder groups ── */
 function renderCategory(cat) {
   const area = $('projects-area');
   area.innerHTML = '';
-
-  // For the active category, show its projects directly (no nested folder needed)
-  // But if there are sub-groups (e.g. iterations), they are just all projects in cat
   const catProjects = projects.filter(p => (p.category || 'Other') === cat);
-
   const wrapper = document.createElement('div');
   wrapper.style.cssText = 'border:1px solid var(--card-border);background:var(--card-border);display:flex;flex-direction:column;gap:1px';
-
-  catProjects.forEach((p, i) => {
-    const card = buildCard(p, i, true);
-    card.style.paddingLeft = '2rem';
-    card.style.border = 'none';
-    wrapper.appendChild(card);
-  });
-
   if (catProjects.length === 0) {
     wrapper.innerHTML = '<div style="padding:3rem 2rem;font-family:var(--mono);font-size:0.8rem;color:var(--muted);text-align:center">No projects in this category yet.</div>';
+  } else {
+    catProjects.forEach((p, i) => {
+      const card = buildCard(p, i);
+      card.style.paddingLeft = '2rem';
+      card.style.border = 'none';
+      wrapper.appendChild(card);
+    });
   }
-
   area.appendChild(wrapper);
 }
 
-/* ── Render "Browse" tab — all categories as collapsible folders ── */
 function renderBrowse() {
   const area = $('projects-area');
   area.innerHTML = '';
-
   const wrap = document.createElement('div');
   wrap.style.cssText = 'border:1px solid var(--card-border);overflow:hidden;border-radius:2px';
 
   allCategories.forEach((cat, ci) => {
     const catProjects = projects.filter(p => (p.category || 'Other') === cat);
-
-    // Folder header
     const header = document.createElement('div');
     header.className = 'category-header';
     if (ci > 0) header.style.borderTop = '1px solid var(--card-border)';
@@ -425,15 +538,12 @@ function renderBrowse() {
       </div>
       <span class="category-count">${catProjects.length} project${catProjects.length !== 1 ? 's' : ''}</span>
     `;
-
-    // Folder body
     const body = document.createElement('div');
     body.className = 'category-body';
-
     const list = document.createElement('div');
     list.style.cssText = 'display:flex;flex-direction:column;gap:1px;background:var(--card-border)';
     catProjects.forEach((p, i) => {
-      const card = buildCard(p, i, true);
+      const card = buildCard(p, i);
       card.style.paddingLeft = '3.5rem';
       card.style.border = 'none';
       card.style.borderTop = '1px solid var(--card-border)';
@@ -441,35 +551,28 @@ function renderBrowse() {
     });
     body.appendChild(list);
 
-    // Toggle open/close
-    let isOpen = ci === 0; // first folder open by default
+    let isOpen = ci === 0;
     if (isOpen) { body.classList.add('open'); header.querySelector('.category-icon').classList.add('open'); }
-
     header.addEventListener('click', () => {
       isOpen = !isOpen;
       body.classList.toggle('open', isOpen);
       header.querySelector('.category-icon').classList.toggle('open', isOpen);
     });
-
     wrap.appendChild(header);
     wrap.appendChild(body);
   });
-
   area.appendChild(wrap);
 }
 
-/* ── Tab system ── */
+// ── TAB SYSTEM ──
 const tabBar = $('tab-bar');
 const tabs = [
-  { id: 'all',    label: 'All' },
+  { id: 'all', label: 'All' },
   { id: 'browse', label: '⊞ Browse Folders' },
   ...allCategories.map(c => ({ id: c, label: c }))
 ];
 
-let activeTab = 'all';
-
 function setTab(id) {
-  activeTab = id;
   tabBar.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.id === id));
   if (id === 'all') renderAll();
   else if (id === 'browse') renderBrowse();
@@ -485,7 +588,6 @@ tabs.forEach(t => {
   tabBar.appendChild(btn);
 });
 
-// Boot
 setTab('browse');
 </script>
 </body>
