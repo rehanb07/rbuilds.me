@@ -66,6 +66,7 @@ export const projects = [
     link: "https://cad.onshape.com/documents/ed27b56935eded6d35c01e6f/w/4cc3593340dbb2453637039c/e/139f5e426054fd58c0a2554b?renderMode=0&uiState=68c832ce3e52696d53eb3dd6",
     type: "CAD",
     category: "FRC Mechanisms",
+    featured: true,                              // ← makes this appear in the Featured section
     tags: ["Onshape", "FRC", "Fabrication", "Worlds"]
   },
   // Add more FRC Mechanisms here ↓
