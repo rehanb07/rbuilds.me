@@ -72,8 +72,8 @@ export const projects = [
   {
     title: "Dual Channel Idexer",
     desc: "Designed and fabricated 5895 Jormungandr 2-stage belt driven elevator, which went on to win our division at Worlds",
-    img: "Elevatorv1.png",
-    link: "https://cad.onshape.com/documents/ed27b56935eded6d35c01e6f/w/4cc3593340dbb2453637039c/e/139f5e426054fd58c0a2554b?renderMode=0&uiState=68c832ce3e52696d53eb3dd6",
+    img: "Indexer.png",
+    link: "https://cad.onshape.com/documents/ce4ee1d9e80d64dd94c8dbbb/w/ce65f0388f7ef3d8ec2a1326/e/11918b15bd681a6cdc9e9c74?renderMode=0&uiState=69fa12e2064e6634431dd4df",
     type: "CAD",
     category: "FRC Mechanisms",                            // ← makes this appear in the Featured section
     tags: ["Onshape", "FRC", "Fabrication", "Worlds"]
