@@ -56,7 +56,6 @@ export const projects = [
     img: "Turretv1.png",
     link: "https://cad.onshape.com/documents/dad9a5143e948fa790757cbd/w/f9912f3b918c5744adae4bed/e/58a58bbf9e93fa3f64d450c1?renderMode=0&uiState=68c833703e33063612d30182",
     type: "CAD",
-    featured: false, 
     category: "FRC Mechanisms",
     tags: ["Onshape", "FRC", "REBUILT"]
   },
@@ -76,7 +75,6 @@ export const projects = [
     img: "Indexer.png",
     link: "https://cad.onshape.com/documents/ce4ee1d9e80d64dd94c8dbbb/w/ce65f0388f7ef3d8ec2a1326/e/11918b15bd681a6cdc9e9c74?renderMode=0&uiState=69fa12e2064e6634431dd4df",
     type: "CAD",
-    featured: false, 
     category: "FRC Mechanisms",
     tags: ["Onshape", "FRC", "Fabricated", "REBUILT"]
   },
