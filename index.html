@@ -113,17 +113,7 @@ section{padding:6rem 3rem}
 .featured-meta{display:flex;align-items:center;justify-content:space-between;padding-top:1.5rem;border-top:1px solid var(--card-border)}
 .featured-type{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
 
-/* Card extra links (pills below tags on list cards) */
-.card-links{display:flex;gap:0.45rem;flex-wrap:wrap;margin-top:0.65rem}
-.card-link-pill{
-  display:inline-flex;align-items:center;gap:0.3rem;
-  font-family:var(--mono);font-size:0.6rem;letter-spacing:0.06em;text-transform:uppercase;
-  color:var(--muted);background:var(--ink3);border:1px solid var(--subtle);
-  padding:0.2rem 0.6rem;border-radius:1px;
-  transition:color 0.2s,border-color 0.2s,background 0.2s;
-}
-.card-link-pill .lnk-icon{font-size:0.45rem;color:var(--accent)}
-.card-link-pill:hover{color:var(--fg);border-color:var(--accent);background:rgba(232,201,122,0.06)}
+
 
 .featured-badge{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);background:rgba(232,201,122,0.1);border:1px solid rgba(232,201,122,0.3);padding:0.2rem 0.6rem;border-radius:1px}
 
@@ -154,14 +144,31 @@ section{padding:6rem 3rem}
 .project-thumb{width:72px;height:54px;object-fit:cover;border-radius:2px;filter:grayscale(50%);transition:filter 0.25s;background:var(--ink3);flex-shrink:0}
 .project-card:not(.no-link):hover .project-thumb{filter:grayscale(0%)}
 .project-meta{flex:1;min-width:0}
-.project-name{font-family:var(--serif);font-size:1.15rem;margin-bottom:0.25rem;line-height:1.2}
+.project-name{font-family:var(--serif);font-size:1.15rem;margin-bottom:0.35rem;line-height:1.2}
+.project-tags{display:flex;gap:0.35rem;margin-bottom:0.4rem;flex-wrap:wrap}
+.tag{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.07em;color:var(--muted);background:var(--ink3);padding:0.18rem 0.5rem;border-radius:1px;border:1px solid var(--subtle)}
 .project-desc{font-size:0.85rem;color:var(--fg2);font-weight:300;line-height:1.5}
-.project-tags{display:flex;gap:0.4rem;margin-top:0.5rem;flex-wrap:wrap}
-.tag{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.07em;color:var(--muted);background:var(--ink3);padding:0.2rem 0.55rem;border-radius:1px;border:1px solid var(--subtle)}
-.project-right{display:flex;flex-direction:column;align-items:flex-end;gap:0.75rem;min-width:5rem}
-.project-arrow{font-size:1rem;color:var(--accent);transition:transform 0.2s}
-.project-type{font-family:var(--mono);font-size:0.62rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;text-align:right}
-.wip-badge{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:#6b6b74;background:var(--ink3);border:1px solid var(--subtle);padding:0.2rem 0.6rem;border-radius:1px}
+/* right column: stacks badges + link pills + type label */
+.project-right{
+  display:flex;flex-direction:column;align-items:flex-end;
+  gap:0.4rem;min-width:7rem;align-self:stretch;
+  justify-content:flex-start;padding-top:0.1rem;
+}
+.project-arrow{font-size:1rem;color:var(--accent);transition:transform 0.2s;margin-top:auto}
+.project-type{font-family:var(--mono);font-size:0.58rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;text-align:right;margin-top:auto}
+.wip-badge{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);background:var(--ink3);border:1px solid var(--subtle);padding:0.2rem 0.55rem;border-radius:1px;text-align:center}
+/* featured badge — gold tint, distinct from WIP */
+.featured-badge{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);background:rgba(232,201,122,0.12);border:1px solid rgba(232,201,122,0.4);padding:0.2rem 0.55rem;border-radius:1px;text-align:center}
+/* right-column link pills */
+.right-link-pill{
+  display:inline-flex;align-items:center;gap:0.3rem;width:100%;justify-content:flex-end;
+  font-family:var(--mono);font-size:0.58rem;letter-spacing:0.06em;text-transform:uppercase;
+  color:var(--fg2);background:var(--ink3);border:1px solid var(--subtle);
+  padding:0.25rem 0.6rem;border-radius:1px;
+  transition:color 0.2s,border-color 0.2s,background 0.2s;
+}
+.right-link-pill .lnk-icon{font-size:0.42rem;color:var(--accent);flex-shrink:0}
+.right-link-pill:hover{color:var(--accent);border-color:var(--accent);background:rgba(232,201,122,0.06)}
 .projects-flat{border:1px solid var(--card-border);background:var(--card-border);display:flex;flex-direction:column;gap:1px}
 .projects-flat .project-card{padding-left:2rem;border:none}
 
@@ -293,7 +300,7 @@ footer{padding:2rem 3rem;border-top:1px solid var(--card-border);display:flex;ju
 </footer>
 
 <script type="module">
-import { projects } from './project-info.js?v=5';
+import { projects } from './project-info.js?v=6';
 
 const $ = id => document.getElementById(id);
 $('proj-count').textContent = String(projects.length).padStart(2, '0');
@@ -325,17 +332,7 @@ function buildFeaturedLinks(p) {
   return html;
 }
 
-// Builds the pill row of extra links for LIST CARDS
-// Stops clicks from also triggering the card's own href
-function buildCardLinks(p) {
-  if (!p.links || p.links.length === 0) return '';
-  const pills = p.links.map(l =>
-    `<a class="card-link-pill" href="${l.url}" target="_blank" onclick="event.stopPropagation()">
-       <span class="lnk-icon">▶</span>${l.label}
-     </a>`
-  ).join('');
-  return `<div class="card-links">${pills}</div>`;
-}
+
 
 // ─────────────────────────────────────────────────────────────
 // FEATURED SECTION
@@ -367,46 +364,50 @@ if (fp) {
 
 // ─────────────────────────────────────────────────────────────
 // PROJECT CARD BUILDER
+// Layout: num | thumb | meta(name → tags → desc) | right(badges → link pills → type)
 // ─────────────────────────────────────────────────────────────
 function buildCard(p, index) {
   const isWIP = !p.link || p.link.trim() === '';
-  // Card is a div (non-clickable) if WIP or if it has extra links
-  // (extra links handle their own hrefs; we make the whole card an anchor only for simple projects)
-  const hasExtras = p.links && p.links.length > 0;
-  const useDiv = isWIP || hasExtras;
-
-  const card = document.createElement(useDiv ? 'div' : 'a');
+  const card = document.createElement('div');
   card.className = 'project-card' + (isWIP ? ' no-link' : '');
-  if (!useDiv) { card.href = p.link; card.target = '_blank'; }
-  // For projects with a primary link but also extras, clicking the card itself opens the primary link
-  if (!isWIP && hasExtras) {
-    card.style.cursor = 'default';
-  }
 
   const tagHTML = (p.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
 
-  let rightHTML;
+  // ── Right column: status badge, then link pills, then type label at bottom ──
+  let rightHTML = '<div class="project-right">';
+
+  // Status badge (top of right col)
   if (isWIP) {
-    rightHTML = `<div class="project-right"><span class="wip-badge">WIP</span><span class="project-type">${p.type || ''}</span></div>`;
+    rightHTML += `<span class="wip-badge">WIP</span>`;
   } else if (p.featured) {
-    rightHTML = `<div class="project-right"><span class="featured-badge">★ Featured</span><span class="project-type">${p.type || ''}</span></div>`;
-  } else {
-    rightHTML = `<div class="project-right"><span class="project-arrow">↗</span><span class="project-type">${p.type || ''}</span></div>`;
+    rightHTML += `<span class="featured-badge">★ Featured</span>`;
   }
 
-  // For cards with a primary link, wrap title in an anchor so it's still clickable
-  const titleEl = (!isWIP)
-    ? `<a class="project-name" href="${p.link}" target="_blank" onclick="event.stopPropagation()" style="display:block">${p.title}</a>`
-    : `<div class="project-name">${p.title}</div>`;
+  // Primary link pill
+  if (!isWIP) {
+    rightHTML += `<a class="right-link-pill" href="${p.link}" target="_blank" onclick="event.stopPropagation()">
+                    <span class="lnk-icon">▶</span>CAD
+                  </a>`;
+  }
+
+  // Extra link pills (videos, reveal, etc.)
+  (p.links || []).forEach(l => {
+    rightHTML += `<a class="right-link-pill" href="${l.url}" target="_blank" onclick="event.stopPropagation()">
+                    <span class="lnk-icon">▶</span>${l.label}
+                  </a>`;
+  });
+
+  // Type label (bottom of right col)
+  rightHTML += `<span class="project-type">${p.type || ''}</span>`;
+  rightHTML += '</div>';
 
   card.innerHTML = `
     <span class="project-num">0${index + 1}</span>
     <img class="project-thumb" src="${p.img}" alt="${p.title}">
     <div class="project-meta">
-      ${titleEl}
-      <p class="project-desc">${p.desc}</p>
+      <div class="project-name">${p.title}</div>
       <div class="project-tags">${tagHTML}</div>
-      ${buildCardLinks(p)}
+      <p class="project-desc">${p.desc}</p>
     </div>
     ${rightHTML}
   `;
