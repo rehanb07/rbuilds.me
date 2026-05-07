@@ -43,8 +43,8 @@ export const projects = [
     tags: ["Onshape", "FRC", "Fabrication", "REEFSCAPE"],
     links: [
       { label: "CAD",                url: "https://cad.onshape.com/documents/ed27b56935eded6d35c01e6f/w/4cc3593340dbb2453637039c/e/139f5e426054fd58c0a2554b?renderMode=0&uiState=68c832ce3e52696d53eb3dd6" },
-      { label: "Match Play",         url: "https://youtube.com/watch?v=REPLACE" },
-      { label: "Behind the Bumpers", url: "https://youtube.com/watch?v=REPLACE" },
+      { label: "Match Play",         url: "https://www.youtube.com/watch?v=eeJjN4r7vL4" },
+      { label: "Behind the Bumpers", url: "https://www.youtube.com/watch?v=ZwdZN7-8sKA" },
     ]
   },
   {
@@ -57,6 +57,8 @@ export const projects = [
     tags: ["Onshape", "FRC", "Fabrication", "REBUILT"],
     links: [
       { label: "CAD", url: "https://cad.onshape.com/documents/ce4ee1d9e80d64dd94c8dbbb/w/ce65f0388f7ef3d8ec2a1326/e/11918b15bd681a6cdc9e9c74?renderMode=0&uiState=69fa12e2064e6634431dd4df" },
+       { label: "Match Play", url: "https://www.youtube.com/watch?v=7Ow6jkBr8kw&t=174s" },
+      { label: "Behind the Bumpers", url: "WIP" },
     ]
   },
   {
