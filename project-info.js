@@ -20,6 +20,18 @@
 
 export const projects = [
 
+    {
+    title: "OrbitArm//Archimedes",
+    desc: "Workspace for 6 D.O.F arm, first iteration",
+    img: "Terrabot.png",
+    type: "Hardware",
+    featured: false,
+    category: "OrbitArm",
+    tags: ["Python", "3D-Printed", "Robotics", "Cycloidal","Differential"],
+    links: [
+      { label: "CAD", url: "https://cad.onshape.com/documents/f1a96f1362726f91ca015153/w/4755cc5477bdde3bbcac8804/e/4fffbbcab4ed427c358f243d?renderMode=0&uiState=6a0bdcb51e28e318c6e053f6" },
+    ]
+  },
   // ── FRC MECHANISMS ──────────────────────────────────────────────────────────
   {
     title: "Roller Bearing Turret",
@@ -85,18 +97,7 @@ export const projects = [
     tags: ["Python", "Sensors", "CMU", "Autonomous"],
     links: []   // ← empty = WIP badge
   },
-  {
-    title: "OrbitArm//Archimedes",
-    desc: "Workspace for 6 D.O.F arm, first iteration",
-    img: "Terrabot.png",
-    type: "Hardware",
-    featured: false,
-    category: "OrbitArm",
-    tags: ["Python", "3D-Printed", "Robotics", "Cycloidal","Differential"],
-    links: [
-      { label: "CAD", url: "https://cad.onshape.com/documents/f1a96f1362726f91ca015153/w/4755cc5477bdde3bbcac8804/e/4fffbbcab4ed427c358f243d?renderMode=0&uiState=6a0bdcb51e28e318c6e053f6" },
-    ]
-  },
+
 
   // ── ADD A NEW PROJECT ────────────────────────────────────────────────────────
   // {
