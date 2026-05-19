@@ -85,6 +85,16 @@ export const projects = [
     tags: ["Python", "Sensors", "CMU", "Autonomous"],
     links: []   // ← empty = WIP badge
   },
+  {
+    title: "OrbitArm//Archimedes",
+    desc: "Workspace for 6 D.O.F arm, first iteration",
+    img: "Terrabot.png",
+    type: "Hardware",
+    featured: false,
+    category: "OrbitArm",
+    tags: ["Python", "3D-Printed", "Robotics", "Cycloidal","Differential"],
+    links: []   // ← empty = WIP badge
+  },
 
   // ── ADD A NEW PROJECT ────────────────────────────────────────────────────────
   // {
