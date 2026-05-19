@@ -93,7 +93,9 @@ export const projects = [
     featured: false,
     category: "OrbitArm",
     tags: ["Python", "3D-Printed", "Robotics", "Cycloidal","Differential"],
-    links: []   // ← empty = WIP badge
+    links: [
+      { label: "CAD", url: "https://cad.onshape.com/documents/f1a96f1362726f91ca015153/w/4755cc5477bdde3bbcac8804/e/4fffbbcab4ed427c358f243d?renderMode=0&uiState=6a0bdcb51e28e318c6e053f6" },
+    ]
   },
 
   // ── ADD A NEW PROJECT ────────────────────────────────────────────────────────
