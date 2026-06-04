@@ -35,7 +35,7 @@ export const projects = [
   {
     title: "Cycloidal Gearbox",
     desc: "Cyclodial Design used for OrbitArm -- Inspired by WhiteOwls Cycloidal for 3dp ",
-    img: "Terrabot.png",
+    img: "CycloidaArchimedesV1.png",
     type: "Hardware",
     featured: false,
     category: "Standalone Mechanism",
