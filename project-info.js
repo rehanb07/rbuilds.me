@@ -32,6 +32,18 @@ export const projects = [
       { label: "CAD", url: "https://cad.onshape.com/documents/f1a96f1362726f91ca015153/w/4755cc5477bdde3bbcac8804/e/4fffbbcab4ed427c358f243d?renderMode=0&uiState=6a0bdcb51e28e318c6e053f6" },
     ]
   },
+  {
+    title: "Cycloidal Gearbox",
+    desc: "Cyclodial Design used for OrbitArm -- Inspired by WhiteOwls Cycloidal for 3dp ",
+    img: "Terrabot.png",
+    type: "Hardware",
+    featured: false,
+    category: "Standalone Mechanism",
+    tags: ["3D-Printed", "Robotics", "Cycloidal","Gearbox","Speed Reducer"],
+    links: [
+      { label: "CAD", url: "https://cad.onshape.com/documents/eacc570a6717279fa377b4f1/w/62362ea36bff67a7477c30c2/e/edb0cd51a9b5cce17a525e9c" },
+    ]
+  },
   // ── FRC MECHANISMS ──────────────────────────────────────────────────────────
   {
     title: "Roller Bearing Turret",
