@@ -3,7 +3,6 @@
 // =============================================================================
 //
 // FIELDS YOU CAN USE ON EACH PROJECT:
-// ─────────────────────────────────────────────
 //   title     (required)  — Project name shown in bold.
 //   desc      (required)  — One or two sentences shown under the title.
 //   img       (required)  — Image filename. Put the file next to index.html.
@@ -11,39 +10,41 @@
 //   category  (optional)  — Groups projects into folders/tabs. Same string = same folder.
 //   featured  (optional)  — true on ONE project to show it in the Featured section.
 //   tags      (optional)  — Keyword pills: ["Onshape", "FRC", "2026"]
-//   links     (optional)  — Array of labeled link buttons shown on the card.
-//                           Leave empty or omit → shows WIP badge instead.
-//                           Each: { label: "CAD", url: "https://..." }
-//                           On the featured card: first link = gold button, rest = ghost buttons.
-//                           On list cards: all links stack in the right column as pills.
+//   links     (optional)  — Labeled link buttons. Empty/omitted = WIP badge.
+//                           First link on featured card = gold button, rest = ghost.
+//                           On list cards: all links stack as pills in the right column.
 // =============================================================================
 
 export const projects = [
 
-    {
+  // ── ORBITARM ────────────────────────────────────────────────────────────────
+  {
     title: "OrbitArm//Archimedes",
     desc: "Workspace for 6 D.O.F arm, first iteration",
     img: "Terrabot.png",
     type: "Hardware",
     featured: false,
     category: "OrbitArm",
-    tags: ["Python", "3D-Printed", "Robotics", "Cycloidal","Differential"],
+    tags: ["Python", "3D-Printed", "Robotics", "Cycloidal", "Differential"],
     links: [
       { label: "CAD", url: "https://cad.onshape.com/documents/f1a96f1362726f91ca015153/w/4755cc5477bdde3bbcac8804/e/4fffbbcab4ed427c358f243d?renderMode=0&uiState=6a0bdcb51e28e318c6e053f6" },
     ]
   },
+
+  // ── STANDALONE MECHANISMS ───────────────────────────────────────────────────
   {
     title: "Cycloidal Gearbox",
-    desc: "Cyclodial Design used for OrbitArm -- Inspired by WhiteOwls Cycloidal for 3dp ",
+    desc: "Cyclodial Design used for OrbitArm -- Inspired by WhiteOwls Cycloidal for 3dp",
     img: "CycloidaArchimedesV1.png",
     type: "Hardware",
     featured: false,
     category: "Standalone Mechanism",
-    tags: ["3D-Printed", "Robotics", "Cycloidal","Gearbox","Speed Reducer"],
+    tags: ["3D-Printed", "Robotics", "Cycloidal", "Gearbox", "Speed Reducer"],
     links: [
       { label: "CAD", url: "https://cad.onshape.com/documents/eacc570a6717279fa377b4f1/w/62362ea36bff67a7477c30c2/e/edb0cd51a9b5cce17a525e9c" },
     ]
   },
+
   // ── FRC MECHANISMS ──────────────────────────────────────────────────────────
   {
     title: "Roller Bearing Turret",
@@ -80,8 +81,8 @@ export const projects = [
     category: "FRC Mechanisms",
     tags: ["Onshape", "FRC", "Fabrication", "REBUILT"],
     links: [
-      { label: "CAD", url: "https://cad.onshape.com/documents/ce4ee1d9e80d64dd94c8dbbb/w/ce65f0388f7ef3d8ec2a1326/e/11918b15bd681a6cdc9e9c74?renderMode=0&uiState=69fa12e2064e6634431dd4df" },
-       { label: "Match Play", url: "https://www.youtube.com/watch?v=7Ow6jkBr8kw&t=174s" },
+      { label: "CAD",                url: "https://cad.onshape.com/documents/ce4ee1d9e80d64dd94c8dbbb/w/ce65f0388f7ef3d8ec2a1326/e/11918b15bd681a6cdc9e9c74?renderMode=0&uiState=69fa12e2064e6634431dd4df" },
+      { label: "Match Play",         url: "https://www.youtube.com/watch?v=7Ow6jkBr8kw&t=174s" },
       { label: "Behind the Bumpers", url: "WIP" },
     ]
   },
@@ -107,9 +108,8 @@ export const projects = [
     featured: false,
     category: "Robotics & Code",
     tags: ["Python", "Sensors", "CMU", "Autonomous"],
-    links: []   // ← empty = WIP badge
+    links: []
   },
-
 
   // ── ADD A NEW PROJECT ────────────────────────────────────────────────────────
   // {
