@@ -17,7 +17,6 @@
 
 export const projects = [
 
-  
   // ── ORBITARM ────────────────────────────────────────────────────────────────
   {
     title: "OrbitArm//Archimedes",
@@ -84,7 +83,7 @@ export const projects = [
     links: [
       { label: "CAD",                url: "https://cad.onshape.com/documents/ce4ee1d9e80d64dd94c8dbbb/w/ce65f0388f7ef3d8ec2a1326/e/11918b15bd681a6cdc9e9c74?renderMode=0&uiState=69fa12e2064e6634431dd4df" },
       { label: "Match Play",         url: "https://www.youtube.com/watch?v=7Ow6jkBr8kw&t=174s" },
-      { label: "Behind the Bumpers", url: "WIP" },
+      // { label: "Behind the Bumpers", url: "WIP" },  // ← uncomment when ready
     ]
   },
   {
@@ -111,15 +110,19 @@ export const projects = [
     tags: ["Python", "Sensors", "CMU", "Autonomous"],
     links: []
   },
+
+  // ── HOUSEHOLD ITEMS ─────────────────────────────────────────────────────────
   {
     title: "Darth Peppercorn Holder",
     desc: "PepperMill holder for kitchen",
     img: "Terrabot.png",
-    type: "3D prints",
+    type: "3D Prints",
     featured: false,
     category: "Household Items",
-    tags: ["3DPn", "Handheld",],
-    links: [{label: "CAD", url: "https://cad.onshape.com/documents/cd531f5a20078afeb669a7e7/w/483795fc345875b4f6ad7b7c/e/baca9809a24eb9641b1d32f5"},]
+    tags: ["3D Print", "Handheld"],
+    links: [
+      { label: "CAD", url: "https://cad.onshape.com/documents/cd531f5a20078afeb669a7e7/w/483795fc345875b4f6ad7b7c/e/baca9809a24eb9641b1d32f5" },
+    ]
   },
 
   // ── ADD A NEW PROJECT ────────────────────────────────────────────────────────
