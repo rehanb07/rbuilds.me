@@ -17,6 +17,7 @@
 
 export const projects = [
 
+  
   // ── ORBITARM ────────────────────────────────────────────────────────────────
   {
     title: "OrbitArm//Archimedes",
@@ -109,6 +110,16 @@ export const projects = [
     category: "Robotics & Code",
     tags: ["Python", "Sensors", "CMU", "Autonomous"],
     links: []
+  },
+  {
+    title: "Darth Peppercorn Holder",
+    desc: "PepperMill holder for kitchen",
+    img: "Terrabot.png",
+    type: "3D prints",
+    featured: false,
+    category: "Household Items",
+    tags: ["3DPn", "Handheld",],
+    links: [{label: "CAD", url: "https://cad.onshape.com/documents/cd531f5a20078afeb669a7e7/w/483795fc345875b4f6ad7b7c/e/baca9809a24eb9641b1d32f5"},]
   },
 
   // ── ADD A NEW PROJECT ────────────────────────────────────────────────────────
