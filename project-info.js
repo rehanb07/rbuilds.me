@@ -124,6 +124,18 @@ export const projects = [
       { label: "CAD", url: "https://cad.onshape.com/documents/cd531f5a20078afeb669a7e7/w/483795fc345875b4f6ad7b7c/e/baca9809a24eb9641b1d32f5" },
     ]
   },
+ {
+    title: "Deadpan Condiment Holders",
+    desc: "Holders for Ketchup and Nutella",
+    img: "Terrabot.png",
+    type: "3D Prints",
+    featured: false,
+    category: "Household Items",
+    tags: ["3D Print", "Handheld"],
+    links: [
+      { label: "CAD", url: "https://cad.onshape.com/documents/6c399057bb803e0b4ff694dc/w/e58b33e2a2b12b0f07d59d2d/e/db8ac396a4c99847fe41ebaf?renderMode=0&uiState=6a4dcc62236d82f513475879" },
+    ]
+  },
 
   // ── ADD A NEW PROJECT ────────────────────────────────────────────────────────
   // {
